@@ -1,0 +1,4 @@
+Execution Time: 7.152557373046875e-06 
+Execution Time: 1.0728836059570312e-05 
+Execution Time: 2.3126602172851562e-05 
+Execution Time: 2.0007708072662354 
