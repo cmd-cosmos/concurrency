@@ -2,7 +2,7 @@
 
 # same problem as seen in the multi3 file ---> appending to the results array from a child process
 
-# Using the Array element from multiprocessing module for shared data.
+# Using the Array class from multiprocessing module for shared data.
 
 import time
 import multiprocessing
@@ -21,7 +21,7 @@ def foo(nums:list,results:list):
 if __name__ == "__main__":
     nums = [1,2,3,4,5]
     n = len(nums)
-    results = multiprocessing.Array('i',n) # inbuilt Array --> shared memory.
+    results = multiprocessing.Array('i',n) # inbuilt Array class--> shared memory.
     p = multiprocessing.Process(target=foo, args=(nums,results)) 
 
     p.start()

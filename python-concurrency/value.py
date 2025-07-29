@@ -1,4 +1,4 @@
-# using Value to manipulate a single value shared among the parent and child process.
+# using Value class to manipulate a single value shared among the parent and child process.
 
 import multiprocessing
 
