@@ -25,5 +25,3 @@ if __name__ == "__main__":
 
     print("results array from main scope = {}".format(results))
 
-
-
