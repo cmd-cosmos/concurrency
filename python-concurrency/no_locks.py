@@ -1,4 +1,4 @@
-# using locks to ensure avoidance of race conditions
+# creating race conditions by modifying shared value using 2 processes
 
 import time
 import multiprocessing
