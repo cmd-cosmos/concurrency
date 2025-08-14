@@ -1,4 +1,4 @@
-# True parallel execution unlike task based execution.
+# not exactly parallel execution but asynchronous/concurrent in nature.
 import time
 import asyncio
 

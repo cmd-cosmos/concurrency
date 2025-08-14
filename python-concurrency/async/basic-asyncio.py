@@ -1,5 +1,5 @@
 # using asyncio with the same program execution flow as the synchronous code to speed up execution
-# helps in making iobound processes faster by parallelizing execution
+# helps in making iobound processes faster by asynchronous execution.
 
 import time
 import asyncio

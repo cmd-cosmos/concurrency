@@ -40,7 +40,7 @@ start = time.time()
 asyncio.run(main=main())
 end = time.time()
 time_parallel = end - start
-print("Time for Parallel Execution: {:.4f} seconds\n".format(time_parallel))
+print("Time for Asynchronous Execution: {:.4f} seconds\n".format(time_parallel))
 
 # creating synchronous exection for the requests
 
