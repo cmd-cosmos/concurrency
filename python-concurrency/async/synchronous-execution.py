@@ -13,7 +13,7 @@ def function2():
     print("function 2")
 
 def function3():
-    time.sleep(1)
+    time.sleep(4) # longer sleep to match async sleep gap given to func3
     print("function 3")
 
 
@@ -31,6 +31,6 @@ Output:
 function 1
 function 2
 function 3
-synchronous execution time: 3.00 seconds
+synchronous execution time: 6.00 seconds
 
 '''
