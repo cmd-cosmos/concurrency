@@ -40,7 +40,40 @@ All workers returned
 Event loop closed
 
 '''
-
-
+print("#########################################################################")
 ### Bounded Semaphore: does not allow more releases than acquires
-### equal releases and acquires
+### equal release and acquire calls need to be made
+
+async def bounded_worker(b_semaphore):
+    await b_semaphore.acquire()
+    print("Bounded Semaphore Acquired")
+    await asyncio.sleep(1) # simulating task being performed
+    print("Releasing Bounded Semaphore")
+    b_semaphore.release()
+
+async def b_main():
+    b_semaphore = asyncio.BoundedSemaphore(value=2)
+    b_task1 = asyncio.create_task(bounded_worker(b_semaphore=b_semaphore))
+    b_task2 = asyncio.create_task(bounded_worker(b_semaphore=b_semaphore))
+    b_task3 = asyncio.create_task(bounded_worker(b_semaphore=b_semaphore))
+    await asyncio.wait([b_task1, b_task2, b_task3])
+    print("main coroutine execution")
+
+
+asyncio.run(b_main())
+print("All workers returned")
+
+'''
+Output:
+
+#########################################################################
+Bounded Semaphore Acquired
+Bounded Semaphore Acquired
+Releasing Bounded Semaphore
+Releasing Bounded Semaphore
+Bounded Semaphore Acquired
+Releasing Bounded Semaphore
+main coroutine execution
+All workers returned
+
+'''
