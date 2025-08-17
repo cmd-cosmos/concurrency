@@ -33,6 +33,6 @@ async def new_user(request):
 
 app = web.Application()
 app.router.add_get('/',handle)
-app.router.add_post('/',new_user)
+app.router.add_post('/user',new_user)
 
 web.run_app(app=app)
