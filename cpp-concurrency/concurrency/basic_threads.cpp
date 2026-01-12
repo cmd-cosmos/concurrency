@@ -1,8 +1,10 @@
 #include <iostream>
 #include <thread>
+#include <chrono>
 
 void subsystemCheck(const char* name) {
     std::cout << "\nChecking subsys: " << name << "\n";
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
 
 int main(void)
