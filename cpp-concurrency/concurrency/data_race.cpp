@@ -28,3 +28,12 @@ int main(void)
 
     return EXIT_SUCCESS;
 }
+/**
+ * The program yields correct answer if max compiler optimizations used
+ * 
+ * in case of no optimizations used:
+g++ -o dr data_race                
+Engine 2 burn complete
+Engine 1 burn complete
+fuel used: 1316851 <---------------- random val due to thread interleaving causing data race
+ */
