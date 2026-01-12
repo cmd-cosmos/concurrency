@@ -22,8 +22,6 @@ int main(void)
     t1.join();
     t2.join();
 
-    // fuel used: 2000000
-    // total fuel on board 1'000'000
     std::cout << "fuel used: " << fuelUsed << '\n';
 
     return EXIT_SUCCESS;
